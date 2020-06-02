@@ -9,12 +9,14 @@
 }
 
 .aside .nav li a:hover, 
+.about .about-content .about-text h3 span,
 .aside .nav li a.active{
     color: #ec1839;
 }
 
 .aside .nav-toggler span,
 .section-title h2::before,
+.section-title h2::after,
 .aside .nav-toggler span::before,
 .aside .nav-toggler span::after,
 .home .intro .social-links a{

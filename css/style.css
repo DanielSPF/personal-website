@@ -37,6 +37,7 @@ body{
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: 60px;
 }
 .section-title h2{
     font-size: 40px;
@@ -44,6 +45,7 @@ body{
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
     margin: 0;
+    position: relative;
 }
 .section-title h2::before{
     content: '';
@@ -51,7 +53,16 @@ body{
     width: 50px;
     position: absolute;
     top: 100%;
-    left: 0em;
+    left: 0;
+}
+.section-title h2::after{
+    content: '';
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
 }
 .row{
     display: -ms-flexbox;
@@ -192,6 +203,8 @@ body{
     margin-right: 5px;
 }
 .aside .copyright-text{
+    position: absolute;
+    bottom: 5px;
     font-size: 13px;
     color: #7d7d7d;
 }
@@ -275,3 +288,25 @@ body{
 }
 
 /* About Section */
+.about .about-content{
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .about-text{
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .about-text h3{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #302e4d;
+}
+.about .about-content .about-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: #020203;
+    margin: 0;
+}
