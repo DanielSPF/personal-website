@@ -10,11 +10,17 @@
 
 .aside .nav li a:hover, 
 .about .about-content .about-text h3 span,
+.portfolio .portfolio-filter button.active,
+.service .service-item .service-item-inner .icon .fa,
 .aside .nav li a.active{
     color: #ec1839;
 }
 
 .btn,
+.service .service-item .service-item-inner:hover .icon,
+.about .about-content .timeline .circle-dot,
+.about .about-content .skills .skill-item .progress .progress-in,
+.about .about-content .timeline-item::before,
 .aside .nav-toggler span,
 .section-title h2::before,
 .section-title h2::after,
@@ -22,4 +28,8 @@
 .aside .nav-toggler span::after,
 .home .intro .social-links a{
     background-color: #ec1839;
+}
+
+.portfolio .portfolio-filter button.active{
+    border-color: #ec1839;
 }
