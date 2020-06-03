@@ -90,6 +90,22 @@ body{
     -webkit-box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+.btn{
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: #ffffff;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    display: inline-block;
+    white-space: nowrap;
+}
+.btn:hover{
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
 .hidden{
     display: none !important;
 }
@@ -309,4 +325,42 @@ body{
     line-height: 25px;
     color: #020203;
     margin: 0;
+}
+.about .about-content .personal-info{
+    -ms-flex:0 0 60%;
+    flex:0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+.about .about-content .personal-info .info-item{
+    -ms-flex:0 0 50%;
+    flex:0 0 50%;
+    max-width: 50%;
+}
+.about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    margin: 0;
+    color: #302e4d;
+    border-bottom: 1px solid #e8dfec;
+}
+.about .about-content .personal-info .info-item p span{
+    font-weight: 400;
+    color: #504e70;
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .personal-info .buttons{
+    margin-top: 30px;
+}
+.about .about-content .personal-info .buttons .btn{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.about .about-content .skills{
+    -ms-flex:0 0 40%;
+    flex:0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
 }
