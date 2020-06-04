@@ -9,6 +9,9 @@
 }
 
 .aside .nav li a:hover, 
+.portfolio .portfolio-item .portfolio-info .icon .fa,
+.lightbox .lightbox-controls .prev-item .fa,
+.lightbox .lightbox-controls .next-item .fa,
 .about .about-content .about-text h3 span,
 .portfolio .portfolio-filter button.active,
 .service .service-item .service-item-inner .icon .fa,

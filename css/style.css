@@ -546,6 +546,9 @@ body{
 
 /* Portfolio Section */
 
+.portfolio .container{
+    margin-bottom: 40px;
+}
 .portfolio .portfolio-filter{
     flex: 0 0 100%;
     -ms-flex: 0 0 100%;
@@ -569,15 +572,186 @@ body{
     -webkit-transition: all 0.3s ease;
 }
 .portfolio .portfolio-item{
-    background-color: red;
     flex: 0 0 33.33%;
     -ms-flex: 0 0 33.33%;
     max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner{
+    border: 6px solid #fdf9ff;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
 }
 .portfolio .portfolio-item-inner .portfolio-img img{
     width: 100%;
     display: block;
 }
 .portfolio .portfolio-item .portfolio-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info{
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transform: translate(-20px);
+    -webkit-transform: translate(-20px);
+    opacity: 0;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info h4{
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info .icon{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transform: translate(20px);
+    -webkit-transform: translate(20px);
+    opacity: 0;
+}
+.portfolio .portfolio-item-inner:hover .portfolio-info .icon{
+    transform: translate(0px);
+    -webkit-transform: translate(0px);
+    opacity: 1;
+}
+.portfolio .portfolio-item .portfolio-info .icon .fa{
+    line-height: 40px;
+}
+
+/* Lightbox */
+
+.lightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
     display: none;
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: zoom-out;
+    padding: 30px;
+}
+.lightbox.open{
+    display: flex;
+    display: -ms-flexbox;
+}
+.lightbox .lightbox-content img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 430px;
+    cursor: pointer;
+}
+.lightbox.open .lightbox-content{
+    animation: lightboxImage .5s ease;
+}
+@keyframes lightboxImage{
+    0%{
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+@-webkit-keyframes lightboxImage{
+    0%{
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+}
+.lightbox .lightbox-content{
+    position: relative;
+}
+.lightbox .lightbox-content .lightbox-caption{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+}
+.lightbox .lightbox-content .lightbox-close{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -40px;
+    right: 0px;
+    font-size: 32px;
+    text-align: right;
+    color: #ffffff;
+    line-height: 40px;
+    cursor: pointer;
+}
+.lightbox .lightbox-controls .prev-item, 
+.lightbox .lightbox-controls .next-item{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 110;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+.lightbox .lightbox-controls .prev-item:active, 
+.lightbox .lightbox-controls .next-item:active{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+.lightbox .lightbox-controls .prev-item{
+    left: 30px;
+}
+.lightbox .lightbox-controls .next-item{
+    right: 30px;
+}
+.lightbox .lightbox-controls .prev-item .fa,
+.lightbox .lightbox-controls .next-item .fa{
+    font-size: 32px;
+    line-height: 40px;
 }
