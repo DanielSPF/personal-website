@@ -318,7 +318,7 @@ https://pepipost.com/tutorials/how-to-send-emails-with-javascript/
       <!-- Service Section End -->
 
       <!-- Portfolio Section -->
-      <section class="portfolio section">
+      <section class="portfolio section hidden">
         <div class="container">
           <div class="row">
            <div class="section-title padd-15">
@@ -333,7 +333,7 @@ https://pepipost.com/tutorials/how-to-send-emails-with-javascript/
               <button type="button" data-filter="wordpress">Wordpress</button>
             </div>
           </div>
-          <div class="row portfolio-items">
+          <div class="row">
             <!-- Portfolio Item -->
             <div class="portfolio-item padd-15" data-category="web-design">
               <div class="portfolio-item-inner shadow-dark">
@@ -429,6 +429,74 @@ https://pepipost.com/tutorials/how-to-send-emails-with-javascript/
       </section>
       <!-- Portfolio Section End -->
 
+      <!-- Blog Section -->
+      <div class="blog section">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Latest Blog</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Blog Item -->
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="images/blog/1.jpg" alt="">
+                  <div class="blog-date">
+                    4 jun 2020
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Responsive Web Design</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
+                    quam, eum alias id, repellendus magni, quas.</p>
+                  <p class="blog-tags">Tags : <a href="#">Html</a> , <a href="#">css</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Item End -->
+            <!-- Blog Item -->
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="images/blog/2.jpg" alt="">
+                  <div class="blog-date">
+                    4 jun 2020
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Creative Slideshow</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
+                    quam, eum alias id, repellendus magni, quas.</p>
+                  <p class="blog-tags">Tags : <a href="#">Html</a> , <a href="#">Javascript</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Item End -->
+            <!-- Blog Item -->
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="images/blog/3.jpg" alt="">
+                  <div class="blog-date">
+                    4 jun 2020
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Image Gallery Lightbox</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo 
+                    quam, eum alias id, repellendus magni, quas.</p>
+                  <p class="blog-tags">Tags : <a href="#">Javascript</a></p>
+                </div>
+              </div>
+            </div>
+            <!-- Blog Item End -->
+          </div>
+        </div>
+      </div>
+      <!-- Blog Section End -->
+
     </div>
     <!-- Main Content End -->
   </div>
@@ -438,15 +506,15 @@ https://pepipost.com/tutorials/how-to-send-emails-with-javascript/
   <div class="lightbox">
     <div class="lightbox-content">
       <div class="lightbox-close">&times;</div>
-      <img src="images/portfolio/2.jpg" alt="" class="lightbox-img">
+      <img src="" alt="" onclick="nextItem()" class="lightbox-img">
       <div class="lightbox-caption">
-        <div class="caption-text">Web Design</div>
-        <div class="caption-counter">1 of 6</div>
+        <div class="caption-text"></div>
+        <div class="caption-counter"></div>
       </div>
     </div>
     <div class="lightbox-controls">
-      <div class="prev-item"><i class="fa fa-angle-left"></i></div>
-      <div class="next-item"><i class="fa fa-angle-right"></i></div>
+      <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
+      <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
     </div>
   </div>
   <!-- Lightbox End -->
