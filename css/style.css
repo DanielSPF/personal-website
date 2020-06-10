@@ -255,7 +255,7 @@ input, textarea, select{
     font-weight: 700;
     margin: 20px 0 5px;
 }
-.home .intro p{
+.home .intro span{
     font-size: 16px;
     font-weight: 500;
     margin: 0;
@@ -942,12 +942,12 @@ input, textarea, select{
 /* Responsive */
 
 @media(max-width: 1199px){
-    .aside{
+    /* .aside{
         left: -270px;
     }
     .main-content{
         padding-left: 0;
-    } 
+    }  */
     .about .about-content .personal-info .info-item p span{
         display: block;
         margin-left: 0;
