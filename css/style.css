@@ -31,6 +31,82 @@ input, textarea, select{
     min-height: 100vh;
     display: block;
     padding: 0 30px;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1;
+}
+.section.active{
+    opacity: 1;
+    z-index: 2;
+    animation: slideSection 1s ease;
+    -webkit-animation: slideSection 1s ease;
+    -moz-animation: slideSection 1s ease;
+    -o-animation: slideSection 1s ease;
+}
+.section.back-section{
+    z-index: 1;
+}
+@keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+@-webkit-keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+@-moz-keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+@-o-keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
 }
 .section .container{
     padding-top: 60px;
@@ -79,9 +155,6 @@ input, textarea, select{
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
-}
-.main-content{
-    padding-left: 270px;
 }
 .container{
     max-width: 1100px;
