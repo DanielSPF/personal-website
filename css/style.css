@@ -40,6 +40,8 @@ input, textarea, select{
     overflow-x: hidden;
     overflow-y: auto;
     opacity: 1;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 .section.active{
     opacity: 1;
@@ -159,7 +161,6 @@ input, textarea, select{
 .container{
     max-width: 1100px;
     width: 100%;
-    /* background-color: red; */
     margin: auto;
 }
 .shadow-dark{
@@ -188,7 +189,60 @@ input, textarea, select{
     display: none !important;
 }
 
+/* Preloader */
+.preloader{
+    background-color: #222222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 150;
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+}
+.preloader.opacity-0{
+    opacity: 0;
+}
+.preloader .loader{
+    height: 40px;
+    width: 40px;
+    border: 4px solid #e3e3e3;
+    border-radius: 50%;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
  /* Aside */
+
 .aside{
     width: 270px;
     background-color: #fdf9ff; 
@@ -199,6 +253,9 @@ input, textarea, select{
     z-index: 10;
     border-right: 1px solid #e8dfec;
     padding: 30px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    overflow-y: auto;
 }
 .aside .logo{
     padding: 30px 0;
@@ -237,7 +294,7 @@ input, textarea, select{
     cursor: pointer;
     position: fixed;
     left: 300px;
-    top: 30px;
+    top: 20px;
     z-index: 11;
     border-radius: 5px;
     background-color: #fdf9ff; 
@@ -248,12 +305,17 @@ input, textarea, select{
     align-items: center;
     justify-content: center;
     -ms-flex-pack: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 .aside .nav-toggler span{
     height: 2px;
     width: 18px;
     display: inline-block;
     position: relative;
+}
+.aside .nav-toggler.open span{
+    background-color: transparent;
 }
 .aside .nav-toggler span::before{
     content: '';
@@ -263,6 +325,11 @@ input, textarea, select{
     top: -6px;
     left: 0;
 }
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 0px;
+}
 .aside .nav-toggler span::after{
     content: '';
     height: 2px;
@@ -270,6 +337,11 @@ input, textarea, select{
     position: absolute;
     top: 6px;
     left: 0;
+}
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    top: 0px;
 }
 .aside .nav{
     list-style: none;
@@ -1015,12 +1087,29 @@ input, textarea, select{
 /* Responsive */
 
 @media(max-width: 1199px){
-    /* .aside{
+    .section .container{
+        padding-top: 70px;
+    }
+    .aside .nav-toggler{
+        display: -ms-flexbox;
+        display: flex;
+        left: 30px;
+    }
+    .aside .nav-toggler.open{
+        left: 300px;
+    }
+    .aside{
         left: -270px;
     }
-    .main-content{
-        padding-left: 0;
-    }  */
+    .aside.open{
+        left: 0;
+    }
+    .section{
+        left: 0;
+    }
+    .section.open{
+        left: 270px;
+    }
     .about .about-content .personal-info .info-item p span{
         display: block;
         margin-left: 0;
