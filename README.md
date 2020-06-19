@@ -18,7 +18,7 @@ Upvesh is a  fully responsive personal, portfolio, resume template that consists
 
 if you watch this full tutorial you will learn lot of things.
 
-Here is the list of its features :
+What has been learned :
 - Responsive Layout
 - 5 Color Skins
 - Light/Dark
